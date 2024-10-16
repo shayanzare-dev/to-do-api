@@ -3,5 +3,5 @@ import 'package:to_do_api/src/pages/todo_list/controllers/to_do_list_controller.
 
 class ToDoBinding extends Bindings {
   @override
-  void dependencies() => Get.lazyPut(() => ToDoController());
+  void dependencies() => Get.lazyPut(() => ToDoListController());
 }

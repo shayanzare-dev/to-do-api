@@ -1,22 +1,22 @@
-class ToDoViewModel {
+class AddTodoDto {
   final int userId;
   final int id;
   final String title;
   final bool completed;
 
-  const ToDoViewModel({
+  const AddTodoDto({
     required this.userId,
     required this.id,
     required this.title,
     required this.completed,
   });
 
-  factory ToDoViewModel.fromJson({required Map<String, dynamic> json}) =>
-      ToDoViewModel(
-          userId: json['userId'],
-          id: json['id'],
-          title: json['title'],
-          completed: json['completed']);
+  Map<String, dynamic> toJson() => {
+        'userId': userId,
+        'id': id,
+        'title': title,
+        'completed': completed,
+      };
 
   @override
   String toString() {

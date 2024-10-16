@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:to_do_api/src/pages/deatel/controllers/detail_controller.dart';
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends GetView<DetailController> {
   const DetailScreen({super.key});
 
   @override
@@ -14,6 +16,9 @@ class DetailScreen extends StatelessWidget {
   }
 
   Widget _body() => Column(
-        children: [],
+        children: [
+          Text(
+              '${controller.todo.value?.completed.toString()}${controller.todo.value?.title}')
+        ],
       );
 }
